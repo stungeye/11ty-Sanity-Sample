@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+
+{% for party in parties %}
+  <h2>{{ party.shortName }}</h2>
+  <p>{{ party.longName }}</p>
+  {% image party.shortName %}
+    {% sanityImageUrlFor party.logo, 100 %}
+  {% endimage %}
+<p>{% sanityImageUrlFor party.logo, 100 %}</p>
+{% endfor %}
+
+{% image "Stung Eye" %} http://stungeye.com/images/eye.jpg {% endimage %}
